@@ -1,0 +1,69 @@
+.beer-item {
+  display: flex;
+  min-width: 60vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+  border-right: solid;
+  border-right-width: 1px;
+  border-right-color: black;
+}
+
+.beer-item img {
+  padding-left: 25px;
+  width: 1.8em;
+  height: 7em;
+}
+
+.beername {
+  max-width: 25em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.beer-data {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 10em;
+  flex-direction: column;
+  border-left: solid;
+  border-left-width: 1px;
+  border-left-color: black;
+}
+
+.beer-ibuabv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+}
+
+.abv {
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-right: 5px;
+  font-size: 14px;
+}
+
+.ibu {
+  font-size: 14px;
+}
+
+.rating {
+  padding-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -3px;
+}
