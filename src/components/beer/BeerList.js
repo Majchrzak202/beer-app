@@ -1,32 +1,30 @@
 import React from "react";
+import BeerItem from "./BeerItem";
 
 import "./BeerList.css";
 
-const BeerList = () => {
+const BeerList = ({ beers }) => {
+  if (beers.length === 0) {
+    return null;
+  }
+
+  console.log(beers);
+
   return (
-    <div className="beer-list-section">
+    <div className="beer-list">
       <div className="line"></div>
       <ul>
-        <li>
-          <div className="beer-item">
-            <img />
-            <div>
-              <h3>Corona Export</h3>
-              <p>Pyszne piwko Koronka</p>
-            </div>
-            <div>
-              <div>
-                <p>4,5% ABV</p>
-                <p>18 IBU</p>
-              </div>
-              <div>
-                <p>Ocena 5/5</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li></li>
-        <li></li>
+        {beers.map((beer) => (
+          <BeerItem
+            name={beer.name}
+            abv={beer.abv}
+            ibu={beer.ibu}
+            key={beer.id}
+            img={beer['image_url']}
+            id={beer.id}
+            tagline={beer.tagline}
+          />
+        ))}
       </ul>
     </div>
   );
