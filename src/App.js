@@ -34,7 +34,7 @@ const App = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/randombeer" element={<RandomBeer />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/beer/:id" element={<BeerPage />}></Route>
+          <Route path="/beer/:id" element={<BeerPage beers={beers} />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
@@ -42,5 +42,3 @@ const App = () => {
 };
 
 export default App;
-
-
