@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
-import SearchBar from "./components/search/SearchBar";
-import BeerList from "./components/beer/BeerList";
 import "./App.css";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import RandomBeer from "./pages/RandomBeer";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import BeerPage from "./components/beer/BeerPage";
 
 const api = {
   base: "https://api.punkapi.com/v2/beers",
@@ -18,14 +23,24 @@ const App = () => {
   };
 
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
       <div className="App">
-        <SearchBar fetchBeers={fetchBeers} />
-        <BeerList beers={beers} />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home fetchBeers={fetchBeers} beers={beers} />}
+          ></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/randombeer" element={<RandomBeer />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/beer/:id" element={<BeerPage />}></Route>
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 };
 
 export default App;
+
+
