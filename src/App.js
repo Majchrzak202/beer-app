@@ -8,6 +8,7 @@ import RandomBeer from "./pages/RandomBeer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import BeerPage from "./components/beer/BeerPage";
+import ThankYou from "./pages/ThankYou";
 
 const api = {
   base: "https://api.punkapi.com/v2/beers",
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/randombeer" element={<RandomBeer />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path='/thank' element={<ThankYou/>}></Route>
           <Route path="/beer/:id" element={<BeerPage beers={beers} />}></Route>
         </Routes>
       </div>
