@@ -1,0 +1,33 @@
+.random-beer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.random-beer ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.random-beer-button {
+    display: flex;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+      -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(
+      to right,
+      rgb(238, 166, 31) 0%,
+      rgb(239, 184, 81) 0%,
+      rgb(231, 191, 117) 0%
+    );
+    color: #fff;
+    margin-bottom: 25px;
+  }
