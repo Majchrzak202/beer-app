@@ -1,8 +1,11 @@
 import React from "react";
 
-const BeerPage = () => {
-    return <div>
+const BeerPage = ({beers}) => {
 
+   
+    
+    return <div>
+        
     </div>
 }
 
