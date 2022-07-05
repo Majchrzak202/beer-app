@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const BeerPage = () => {
   const [beer, setBeer] = useState();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBeer = async () => {
@@ -22,17 +23,15 @@ const BeerPage = () => {
   const name = beer[0].name;
   const description = beer[0].description;
 
-  return <div>{name}{description}</div>;
-  /* if (typeof beer === "undefined") {
-    return null;
-  } else {
-    return (
+  return (
+    <div>
       <div>
-        {beer[0].name} <br />
-        {beer[0].abv}
+        {name}
+        {description}
       </div>
-    );
-  } */
+      <button onClick={() => navigate("/")}>GO BACK</button>
+    </div>
+  );
 };
 
 export default BeerPage;
