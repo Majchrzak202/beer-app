@@ -16,17 +16,18 @@ const BeerList = ({ beers }) => {
       <div className="line"></div>
       <ul>
         {beers.map((beer) => (
+          
+          <Link key={beer.id} to={`/beer/${beer.id}`}>
           <BeerItem
             name={beer.name}
             abv={beer.abv}
             ibu={beer.ibu}
             key={beer.id}
-            img={beer['image_url']}
+            img={beer["image_url"]}
             id={beer.id}
             tagline={beer.tagline}
-          >
-            <Link to={`/beer/${beer.id}`}></Link>
-          </BeerItem>
+          />
+          </Link>
         ))}
       </ul>
     </div>
