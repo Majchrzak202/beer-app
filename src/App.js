@@ -21,6 +21,7 @@ const App = () => {
     const response = await fetch(`${api.base}?beer_name=${search}&per_page=80`);
     const data = await response.json();
     setBeers(data);
+    console.log(data)
   };
 
   return (
@@ -35,8 +36,8 @@ const App = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/randombeer" element={<RandomBeer />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
-          <Route path='/thank' element={<ThankYou/>}></Route>
-          <Route path="/beer/:id" element={<BeerPage beers={beers} />}></Route>
+          <Route path="/thank" element={<ThankYou />}></Route>
+          <Route path="/beer/:id" element={<BeerPage/>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
