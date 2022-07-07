@@ -1,7 +1,6 @@
 import React from "react";
 import "./BeerItem.css";
 
-
 const BeerItem = ({ name, abv, ibu, img, id, tagline }) => {
   return (
     <li>
