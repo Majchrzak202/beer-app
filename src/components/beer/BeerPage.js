@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { Card, Typography } from "@material-ui/core";
 
 const BeerPage = () => {
   const [beer, setBeer] = useState();
@@ -11,7 +12,6 @@ const BeerPage = () => {
       const response = await fetch(`https://api.punkapi.com/v2/beers/${id}`);
       const data = await response.json();
       setBeer(data);
-      console.log(data);
     };
 
     fetchBeer();
@@ -25,8 +25,13 @@ const BeerPage = () => {
 
   return (
     <div>
+      <Card variant="outlined">
+        <Typography>
+          {name}
+        </Typography>
+      </Card>
       <div>
-        {name}
+       
         {description}
       </div>
       <button onClick={() => navigate("/")}>GO BACK</button>
