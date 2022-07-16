@@ -21,7 +21,7 @@ const BeerList = ({ beers }) => {
           setFilteredBeers([...beers].sort((a, b) => a.ibu - b.ibu));
           break;
         case "Highest ABV":
-          setFilteredBeers([...beers].sort((a, b) => b.ibu - a.ibu));
+          setFilteredBeers([...beers].sort((a, b) => b.abv - a.abv));
           break;
         case "Highest IBU":
           setFilteredBeers([...beers].sort((a, b) => b.ibu - a.ibu));
@@ -59,7 +59,11 @@ const BeerList = ({ beers }) => {
       <div className="line"></div>
       <ul>
         {filteredBeers.map((beer) => (
-          <Link key={beer.id} to={`/beer/${beer.id}`}>
+          <Link
+            style={{ textDecoration: "none" }}
+            key={beer.id}
+            to={`/beer/${beer.id}`}
+          >
             <BeerItem
               name={beer.name}
               abv={beer.abv}
