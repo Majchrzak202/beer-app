@@ -1,41 +1,29 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { useNavigate } from "react-router-dom";
+import useForm from "../components/hooks/useForm";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [nameIsTouched, setNameIsTouched] = useState(false);
-  const [email, setEmail] = useState("");
-  const [emailIsTouched, setEmailIsTouched] = useState(false);
+  const {
+    hasError: nameIsInvalid,
+    valueChangeHandler: nameChangeHandler,
+    valueInputBlurHandler: nameBlurHandler,
+    valueIsValid: nameIsValid,
+  } = useForm((enteredValue) => enteredValue.trim() !== "");
+
+  const {
+    hasError: emailIsInvalid,
+    valueChangeHandler: emailChangeHandler,
+    valueInputBlurHandler: emailBlurHandler,
+    valueIsValid: emailIsValid,
+  } = useForm((enteredValue) => enteredValue.includes("@"));
 
   const navigate = useNavigate();
-
-  const nameIsValid = name.length > 0;
-  const emailIsValid = email.includes("@");
-
-  const nameIsInvalid = !nameIsValid && nameIsTouched;
-  const emailIsInvalid = !emailIsValid && emailIsTouched;
 
   let formIsValid = false;
   if (nameIsValid && emailIsValid) {
     formIsValid = true;
   }
-
-  const nameChangeHandler = (e) => {
-    setName(e.target.value);
-  };
-
-  const nameBlurHandler = () => {
-    setNameIsTouched(true);
-  };
-
-  const emailChangeHandler = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const emailBlurHandler = () => {
-    setEmailIsTouched(true);
-  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -68,7 +56,7 @@ const Contact = () => {
             type="text"
             placeholder="name"
           />
-           {nameIsInvalid && <p>Please provide a valid name!</p>}
+          {nameIsInvalid && <p>Please provide a valid name!</p>}
         </div>
         <div className="fragment">
           <label>E-mail</label>
@@ -83,7 +71,7 @@ const Contact = () => {
         </div>
         <div className="fragment">
           <label>Message</label>
-          <textarea />
+          <textarea className="textArea" />
         </div>
         <div className="div-form-button">
           <button disabled={!formIsValid} className="contact-form-button">
