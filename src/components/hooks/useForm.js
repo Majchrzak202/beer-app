@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const useForm = (validateValue) => {
   const [enteredValue, setEnteredValue] = useState("");
