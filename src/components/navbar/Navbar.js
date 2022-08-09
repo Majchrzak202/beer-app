@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import beerLogo from "../../assets/beerLogo.png"
 
 const Navbar = () => {
   const [navExpanded, setNavExpanded] = useState(false);
 
   return (
     <nav className="navbar">
-      <img className="brand" alt="1" />
+      <img className="brand" src={beerLogo} alt="1" />
       <button
         onClick={() => {
           setNavExpanded(!navExpanded);
@@ -28,11 +29,11 @@ const Navbar = () => {
         </svg>
       </button>
       <div className={navExpanded ? "nav-menu expanded" : "nav-menu"}>
-        <ul>
-          <li><Link to={'/'}>Home</Link></li>
-          <li><Link to={'/about'}>About</Link></li>
-          <li><Link to={'/contact'}>Contact</Link></li>
-          <li><Link to={'/randombeer'}>Random Beer</Link></li>
+        <ul >
+          <li><Link className="link" to={'/'}>Home</Link></li>
+          <li><Link className="link" to={'/about'}>About</Link></li>
+          <li><Link className="link" to={'/contact'}>Contact</Link></li>
+          <li><Link className="link" to={'/randombeer'}>Random Beer</Link></li>
         </ul>
       </div>
     </nav>
