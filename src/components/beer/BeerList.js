@@ -46,7 +46,7 @@ const BeerList = ({ beers }) => {
     <div className="beer-list">
       <div>
         {" "}
-        <button>Sort</button>
+       
         Sort by :
         <select onChange={statusHandler}>
           <option>Most Popular</option>
