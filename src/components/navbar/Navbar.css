@@ -7,21 +7,31 @@
     background-color: hsla(0, 100%, 50%, 0.15);
     padding: 0.5rem 0rem;
     color: black;
+    text-decoration: inherit;
+  
   }
   
   .brand {
     color: black;
     margin-left: 1rem;
+    width: 55px;
+    height: 55px;
   }
   
   .nav-menu {
     margin-left: auto;
+  }
+
+  .link {
+    text-decoration: none;
+    color: black
   }
   
   .nav-menu ul {
     display: flex;
     flex-direction: row;
     padding: 0;
+    text-decoration: none;
   }
   
   .nav-menu li {
