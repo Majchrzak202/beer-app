@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./RandomBeer.css";
 import { Link } from "react-router-dom";
 
+
 const api = {
   base: "https://api.punkapi.com/v2/beers/random",
 };
@@ -18,7 +19,7 @@ const RandomBeer = () => {
 
   return (
     <div className="random-beer">
-        <h2>Looking for inspiration? Randomly find Beer!</h2>
+      <h2>Looking for inspiration? Randomly find Beer!</h2>
       <button onClick={fetchRandomBeer} className="random-beer-button">
         Find Random BEER!
       </button>
