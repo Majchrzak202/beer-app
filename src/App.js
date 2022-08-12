@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import BeerPage from "./components/beer/BeerPage";
 import ThankYou from "./pages/ThankYou";
 
-import Navbar from "./components/navbar/Navbir";
+import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 
 const api = {
