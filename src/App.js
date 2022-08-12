@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "./components/navbar/Navbar";
 import "./App.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -9,6 +8,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import BeerPage from "./components/beer/BeerPage";
 import ThankYou from "./pages/ThankYou";
+
+import Navbar from "./components/navbar/Navbir";
+import Footer from "./components/footer/Footer";
 
 const api = {
   base: "https://api.punkapi.com/v2/beers",
@@ -39,6 +41,7 @@ const App = () => {
           <Route path="/beer/:id" element={<BeerPage />}></Route>
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 };
