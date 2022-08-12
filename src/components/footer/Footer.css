@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 50px;
+  background-color: hsla(0, 100%, 50%, 0.15);
+  margin-top: 20px;
+  
+}
+
+.footer p {
+    font-size: 12px;
+    margin-left: 10px;
+}
