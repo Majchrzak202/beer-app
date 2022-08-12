@@ -12,6 +12,7 @@
   border-right: solid;
   border-right-width: 1px;
   border-right-color: black;
+  
 }
 
 .beer-item img {
@@ -57,6 +58,8 @@
   padding-right: 5px;
   font-size: 14px;
 }
+
+
 
 .ibu {
   font-size: 14px;
