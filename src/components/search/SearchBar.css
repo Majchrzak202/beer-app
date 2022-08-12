@@ -15,7 +15,7 @@
     padding: 0.5rem;
     border-radius: 6px;
     border: 1px solid;
-    width: 20rem;
+    width: 18rem;
     max-width: 100%;
   }
   
@@ -49,4 +49,10 @@
       rgb(231, 191, 117) 0%
     );
     color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .form input {
+      width: 80vw;
+    }
   }

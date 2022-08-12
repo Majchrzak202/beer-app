@@ -45,8 +45,6 @@ const BeerList = ({ beers }) => {
   return (
     <div className="beer-list">
       <div>
-        {" "}
-       
         Sort by :
         <select onChange={statusHandler}>
           <option>Most Popular</option>
@@ -59,11 +57,7 @@ const BeerList = ({ beers }) => {
       <div className="line"></div>
       <ul>
         {filteredBeers.map((beer) => (
-          <Link
-            style={{ textDecoration: "none" }}
-            key={beer.id}
-            to={`/beer/${beer.id}`}
-          >
+          <Link style={{ textDecoration: 'none', color:'black' }} key={beer.id} to={`/beer/${beer.id}`}>
             <BeerItem
               name={beer.name}
               abv={beer.abv}

@@ -87,7 +87,7 @@ const BeerPage = () => {
         alt={name}
       />
       <CardContent>
-        <Typography variant="body1" color="primary">
+        <Typography variant="body1" color="inherit">
           {description}
         </Typography>
       </CardContent>

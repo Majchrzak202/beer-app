@@ -21,6 +21,7 @@
 }
 
 .beername {
+  margin-left: 3px;
   max-width: 25em;
   flex-grow: 1;
   flex-shrink: 1;
