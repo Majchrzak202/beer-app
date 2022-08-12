@@ -3,6 +3,7 @@ import "./Contact.css";
 import { useNavigate } from "react-router-dom";
 import useForm from "../components/hooks/useForm";
 
+
 const Contact = () => {
   const {
     hasError: nameIsInvalid,
@@ -71,7 +72,7 @@ const Contact = () => {
         </div>
         <div className="fragment">
           <label>Message</label>
-          <textarea className="textArea" />
+          <textarea rows="10" cols='10' className="textarea"/>
         </div>
         <div className="div-form-button">
           <button disabled={!formIsValid} className="contact-form-button">

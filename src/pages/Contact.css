@@ -15,15 +15,14 @@
   font-weight: 800;
   margin-bottom: 0.5rem;
   display: block;
-  
 }
-.textArea {
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.fragment textarea {
   width: 20rem;
-  max-width: 100%;
+  height: 20rem;
+  outline: none;
+  resize: none;
+  border-radius: 1px;
+  border: 1px solid #ccc;
 }
 
 .inputControl {
@@ -33,6 +32,7 @@
   border: 1px solid #ccc;
   width: 20rem;
   max-width: 100%;
+  outline: none;
 }
 
 .inputControlInvalid {
@@ -43,6 +43,7 @@
   background-color: #fddddd;
   width: 20rem;
   max-width: 100%;
+  outline: none;
 }
 
 .fragment textarea {
@@ -63,6 +64,7 @@
 .div-form-button {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .constc-form-button {
@@ -84,4 +86,11 @@
     rgb(215, 4, 102) 100%
   );
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
